@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;400&display=swap');
+/* Reset */
+*{
+    box-sizing: border-box;
+}
+html{ 
+    font-size: 62.5%;  
+}
+body{
+    font: 1.6rem 'Open Sans', sans-serif; 
+    margin: 0;
+}
+h1,h2,h3,h4,p,ol,ul,figure,dd{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+h1,h2,h3,h4{
+    font-weight: normal;
+}
+a{
+    text-decoration: none;
+    color: rgb(109, 109, 109);
+}
+
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.logo{
+    max-width: 12rem;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: 0.5rem;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+}
+
+.nav_links li a{
+    transition: all 0.3s ease 0s;
+    padding: 1.9rem;
+}
+
+.nav_links li a:hover{
+    background: rgb(244, 72, 72);
+    color: #fff;
+}
+
+section{
+    background-image: url("../asset/home-hero.jpg");
+    width: 100%;
+    height: 94vh;
+    background-size: 100% 100%;
+}
+
+section h2{
+    color: #fff;
+    margin: 0% 57% 0% 8%;
+    padding-top: 23rem;
+    font-size: 5.2rem;
+    font-weight: lighter;
+    font-family: system-ui;
+    letter-spacing: 0.1rem;
+}
+
+section button{
+    padding: 1.9rem;
+    background: rgb(244, 72, 72);
+    margin-left: 12rem;
+    margin-top: 2rem;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
