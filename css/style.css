@@ -1,10 +1,11 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@200;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap');
 /* Reset */
 *{
     box-sizing: border-box;
 }
 html{ 
-    font-size: 62.5%;  
+    font-size: 62.5%;
+    scroll-behavior: smooth; 
 }
 body{
     font: 1.6rem 'Open Sans', sans-serif; 
@@ -25,10 +26,12 @@ a{
 
 header{
     display: flex;
-    position: absolute;
+    position: fixed;
     align-items: center;
     background-color: #fff;
     width: 100%;
+    justify-content: space-between;
+    box-shadow: 0 0 6px #a8a8a8;
 }
 
 .logo{
@@ -45,7 +48,7 @@ header{
 
 .nav_links li a{
     transition: all 0.3s ease 0s;
-    padding: 1.9rem;
+    padding: 2.2rem;
 }
 
 .nav_links li a:hover{
@@ -53,28 +56,105 @@ header{
     color: #fff;
 }
 
-section{
+section:first-child{
     background-image: url("../asset/home-hero.jpg");
-    width: 100vw;
-    height: 100vh;
     background-size: cover;
 }
 
-section h2{
+section{
+    width: 100vw;
+    height: 100vh;
+}
+
+section h1{
     color: rgb(255, 255, 255);
     margin: 0% 57% 0% 9%;
     padding-top: 27rem;
-    font-size: 5.7rem;
+    padding-bottom: 3rem;
+    font-size: 5.5rem;
     font-weight: lighter;
-    font-family: system-ui;
-    letter-spacing: 0.1rem;
 }
 
-section button{
+section .button1{
     padding: 1.9rem;
     background: rgb(244, 72, 72);
     margin: 1% 9%;
     color: #fff;
     border: 0;
     cursor: pointer;
+}
+
+#create_acc div:first-child{
+    max-width: 40rem;
+    text-align: center;
+    margin: auto;
+    padding-top: 8rem;
+}
+
+#create_acc div h2{
+    padding-top: 2rem;
+    font-weight: 100;
+    color: #868686;
+    font-size: 3rem;
+}
+
+#create_acc div p{
+    padding-top: 7rem;
+}
+
+.formulaire{
+	margin: auto;
+	padding-top: 5%;
+	max-width: 90rem;
+    border: 0.1rem;
+}
+
+.formulaire form input{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    line-height: 3.5rem;
+    padding: 0.5rem;
+    transition: all .6s ease-in-out;
+}
+
+.formulaire form input[type="submit"]{
+    width: 30rem;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background-color: #0071f0;
+    color: #fff;
+    cursor: pointer;
+}
+
+fieldset legend{
+    padding: 1rem;
+    font-size: 2.3rem;
+    font-weight: 300;
+}
+
+
+
+.button2{
+    text-align: center;
+}
+
+.active-link{
+    color: rgb(244, 72, 72);
+}
+
+
+.scroll_down{
+    position: fixed;
+    bottom: 3%;
+    right: 3rem;
+    background-color: rgb(244, 72, 72);
+    padding: 1.7rem 1.8rem;
+    border-radius: 100%;
+    max-width: 7rem;
+}
+
+.scrollup_icon {
+    font-size: 2.4rem;
+    color: #fff;
 }
