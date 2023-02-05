@@ -33,7 +33,7 @@
                     <legend>
                         Créer un compte
                     </legend>
-                    <form action="./src/log.inc.php" method="post">
+                    <form action="./src/traitement.inc.php" method="post">
     
                     <label for="user-lastname">Nom *</label><br>
                     <input type="text" id="lastname" name="nom" placeholder="Nom" aria-required="true"><br>

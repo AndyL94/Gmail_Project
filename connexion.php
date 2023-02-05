@@ -28,7 +28,7 @@
                     <legend>
                         Connectez-vous à votre compte
                     </legend>
-                    <form action="./src/test.inc.php" method="post">
+                    <form action="./src/log.inc.php" method="post">
     
                     <label for="email">Mail *</label><br>
                     <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true"><br>
@@ -43,10 +43,8 @@
     
                     </form>
                 </fieldset>
-                
-                
-                
         </div>
+        
         </section>
     </main>
     <footer>
