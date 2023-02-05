@@ -36,16 +36,16 @@
                     <form action="./src/traitement.inc.php" method="post">
     
                     <label for="user-lastname">Nom *</label><br>
-                    <input type="text" id="lastname" name="nom" placeholder="Nom" aria-required="true"><br>
+                    <input type="text" id="lastname" name="nom" placeholder="Nom" aria-required="true" required><br>
                     
                     <label for="user-firstname">Prénom *</label><br>
-                    <input type="text" id="name" name="prénom" placeholder="Prénom" aria-required="true"><br>
+                    <input type="text" id="name" name="prénom" placeholder="Prénom" aria-required="true" required><br>
     
                     <label for="email">E-mail *</label><br>
-                    <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true"><br>
+                    <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true" required><br>
     
                     <label for="email">Mot de passe *</label><br>
-                    <input type="password" id="password" name="psw" placeholder="Password" aria-required="true"> <br>
+                    <input type="password" id="password" name="psw" placeholder="Password" aria-required="true" required> <br>
                     
                     <div class="button2">
                         <input type="submit" name="submit" value="VALIDER VOTRE COMPTE">
@@ -57,6 +57,7 @@
                 
                 
         </div>
+        
         </section>
     </main>
     <footer>

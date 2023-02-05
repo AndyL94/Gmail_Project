@@ -1,7 +1,6 @@
 <?php 
 
-    if(isset($_POST['submit']))
-    {
+try{
         $nom = $_POST['nom'];
         $prenom = $_POST['prénom'];
         $email = $_POST['mail'];
@@ -16,8 +15,7 @@
         $result = $bdd->prepare($sql);
         $result->execute();
 
-        if($result->rowCount() > 0)
-        {
+        if(isset($_POST['mail']) && isset($_POST['psw'])){
             $data = $result->fetchAll();
             if(password_verify($password, $data[0]["password"]))
             {
@@ -41,6 +39,10 @@
                  <a href=\"../connexion.php\" title=\"pub\">Connectez vous</a>
                  </p>";
         }
+        $result->closeCursor();
+    }
+    catch(Exception $e){
+        die("Erreur de connexion : ".$e->getMessage());
     }
 
 ?>
