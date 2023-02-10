@@ -64,6 +64,10 @@ header{
     cursor: pointer;
 }
 
+.change-theme:hover{
+    color: var(--first-color);
+}
+
 .logo{
     max-width: 12rem;
     cursor: pointer;
@@ -86,27 +90,49 @@ header{
     color: #fff;
 }
 
+section:first-child{
+    background-image: url("../asset/home-hero.jpg");
+    background-size: cover;
+}
+
 section{
     width: 100vw;
     height: 100vh;
 }
 
-#connexion div:first-child{
+section h1{
+    color: rgb(255, 255, 255);
+    margin: 0% 57% 0% 9%;
+    padding-top: 27rem;
+    padding-bottom: 3rem;
+    font-size: 5.5rem;
+    font-weight: lighter;
+}
+
+section .button1{
+    padding: 1.9rem;
+    background: rgb(244, 72, 72);
+    margin: 1% 9%;
+    color: #fff;
+    border: 0;
+    cursor: pointer;
+}
+
+#create_acc div:first-child{
     max-width: 40rem;
     text-align: center;
     margin: auto;
     padding-top: 8rem;
 }
 
-#connexion div h2{
+#create_acc div h2{
     padding-top: 2rem;
     font-weight: 100;
-    color: #868686;
-    font-size: 3rem;
     color: var(--first-color);
+    font-size: 3rem;
 }
 
-#connexion div p{
+#create_acc div p{
     padding-top: 7rem;
     color: var(--first-color-alt);
 }
@@ -152,7 +178,7 @@ fieldset{
     border-color: #ffffff73;
 }
 
-.button{
+.button2{
     text-align: center;
 }
 
@@ -175,4 +201,8 @@ fieldset{
 .scrollup_icon {
     font-size: 2.4rem;
     color: #fff;
+    box-shadow: 2px #000;
+}
+.success{
+    color: rgb(17, 232, 17);
 }

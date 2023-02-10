@@ -10,6 +10,7 @@ html{
 body{
     font: 1.6rem 'Open Sans', sans-serif; 
     margin: 0;
+    background-color: var(--body-bg-color);
 }
 h1,h2,h3,h4,p,ol,ul,figure,dd{
     margin: 0;
@@ -21,17 +22,50 @@ h1,h2,h3,h4{
 }
 a{
     text-decoration: none;
-    color: rgb(109, 109, 109);
+    color: var(--first-color);
+}
+
+:root{
+    --body-bg-color: #fff;
+    --first-color: rgb(109, 109, 109);
+    --first-color-alt: #000;
+    --title-color: rgb(44, 45, 46);
+}
+
+    /*============== Variable Mode Sombre ==============*/
+body.dark-theme{
+    --first-color: rgb(255, 255, 255);
+    --body-bg-color: #262a2e;
+    --shadow-2: inset 21px 21px 19px #181a1d, inset -21px -21px 19px #202225;
+    --first-color-alt: #fff;
+    --title-color: rgb(225, 229, 235);
 }
 
 header{
     display: flex;
     position: fixed;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--body-bg-color);
     width: 100%;
     justify-content: space-between;
     box-shadow: 0 0 6px #a8a8a8;
+}
+
+.nav_btns{
+    display: flex;
+    align-items: center;
+}
+
+.change-theme{
+    font-size: 1.25rem;
+    color: var(--title-color);
+    margin-right: 1rem;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.change-theme:hover{
+    color: var(--first-color);
 }
 
 .logo{
@@ -94,12 +128,13 @@ section .button1{
 #create_acc div h2{
     padding-top: 2rem;
     font-weight: 100;
-    color: #868686;
+    color: var(--first-color);
     font-size: 3rem;
 }
 
 #create_acc div p{
     padding-top: 7rem;
+    color: var(--first-color-alt);
 }
 
 .formulaire{
@@ -107,6 +142,7 @@ section .button1{
 	padding-top: 5%;
 	max-width: 90rem;
     border: 0.1rem;
+    color: var(--first-color);
 }
 
 .formulaire form input{
@@ -167,3 +203,4 @@ fieldset{
     color: #fff;
     box-shadow: 2px #000;
 }
+
