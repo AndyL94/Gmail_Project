@@ -27,14 +27,13 @@
                 <h2>Bienvenue dans votre espace</h2>
             </div>
 
-            <div class="formulaire" role="form" aria-labelledby="inscription">
-                <fieldset>
+                <fieldset class="formulaire">
                     <legend>
                         Connectez-vous à votre compte
                     </legend>
                     <form action="./src/log.inc.php" method="post">
     
-                    <label for="email">Mail *</label><br>
+                    <label for="email">Mail ou login *</label><br>
                     <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true"><br>
     
                     <label for="email">Mot de passe *</label><br>
@@ -47,7 +46,6 @@
     
                     </form>
                 </fieldset>
-        </div>
         
         </section>
     </main>

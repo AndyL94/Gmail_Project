@@ -100,6 +100,7 @@ section{
 
 #connexion div h2{
     padding-top: 2rem;
+    padding-bottom: 4rem;
     font-weight: 100;
     color: #868686;
     font-size: 3rem;
@@ -113,9 +114,8 @@ section{
 
 .formulaire{
 	margin: auto;
-	padding-top: 5%;
+	padding-top: 2%;
 	max-width: 90rem;
-    border: 0.1rem;
     color: var(--first-color);
 }
 
@@ -142,7 +142,8 @@ section{
 }
 
 fieldset legend{
-    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
     font-size: 2.3rem;
     font-weight: 300;
 }

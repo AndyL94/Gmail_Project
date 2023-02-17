@@ -32,8 +32,8 @@
                 <p>Avec les nouveaux onglets personnalisables, repérez immédiatement les nouveaux messages et choisissez ceux que vous souhaitez lire en priorité.</p>
             </div>
 
-            <div class="formulaire" role="form" aria-labelledby="inscription">
-                <fieldset>
+            
+                <fieldset class="formulaire">
                     <legend>
                         Créer un compte
                     </legend>
@@ -58,9 +58,7 @@
     
                     </form>
                 </fieldset>
-                
-                
-        </div>
+            
         
         </section>
     </main>
