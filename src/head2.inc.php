@@ -1,6 +1,6 @@
 <?php 
     class User{
-        public $_css = "./css/connexion.css";
+        public $_css = "./css/connexion1.css";
         static $_lang = ["fr","en"];
         public $_title = "Gmail";
     }

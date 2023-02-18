@@ -8,11 +8,11 @@
 <body>
     <header>
         <a href="./inscription.php"><img class="logo" src="./asset/gmail_logo.png" alt="logo"></a>
-        <nav class="nav_btns">
+        <nav class="nav_btns" id="nav-btns">
             <ul class="nav_links">
-                <li><a href="#forpros">POUR LES PROS</a></li>
-                <li><a href="./connexion.php">CONNEXION</a></li>
-                <li><a href="#create_acc">CRÉER UN COMPTE</a></li>
+                <li><a class="link" href="#forpros">POUR LES PROS</a></li>
+                <li><a class="link" href="./connexion.php">CONNEXION</a></li>
+                <li><a class="active-link" href="#create_acc">CRÉER UN COMPTE</a></li>
             </ul>
             <div class="nav_btns">
                 <!-- Theme change button -->
@@ -68,6 +68,6 @@
     <a href="#create_acc" class="scroll_down">
         <i class="fa-solid fa-chevron-down scrollup_icon" title="Icône Scroll-Down"></i>
     </a>
-    <script src="./js/app2.js"></script>
+    <script src="./js/app.js"></script>
 </body>
 </html>
