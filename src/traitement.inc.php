@@ -16,19 +16,24 @@ try{
         $result->execute();
 
         if(isset($_POST['mail']) && isset($_POST['psw'])){
-            $data = $result->fetchAll();
-            if(password_verify($password, $data[0]["password"]))
+                        
+            $data = $result->fetch();
+            if(password_verify($password, $data['password']))
             {
                 echo "<p class=\"success\">Vous êtes déja inscrit, 
                 <a href=\"../connexion.php\" title=\"pub\">Connectez vous</a>
                 </p>";
-                $_SESSION['email'] = $email;    
+                $_SESSION['email'] = $email;   
             }
             else
             {
-                echo "<br>Identifiants invalides !!!";
+                
+                echo "<br>Cet email est déja utilisé, 
+                <a href=\"../connexion.php\" title=\"pub\">Connectez vous</a>
+                </p>";
+                }
+                
             }
-        }
         else
         {
             $password = password_hash($password, PASSWORD_DEFAULT);
