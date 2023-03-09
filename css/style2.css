@@ -183,6 +183,7 @@ footer {
     padding: 1rem;
     bottom: 0;
     width: 100%;
+    color: var(--first-color-alt);
 }
 
 .button2{
