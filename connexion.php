@@ -31,7 +31,7 @@
                     <legend>
                         Connectez-vous à votre compte
                     </legend>
-                    <form action="./src/log.inc.php" method="post">
+                    <form action="" method="post">
     
                     <label for="email">Mail ou login *</label><br>
                     <input type="email" id="email" name="mail" placeholder="E-mail" aria-required="true" required><br>
@@ -46,11 +46,15 @@
     
                     </form>
                 </fieldset>
+                <?php
+            //inclusion
+            include_once "./src/log.inc.php";
+            ?>
         
         </section>
     </main>
     <footer>
-
+    <p>© Andy Louis - All Rights Reserved for Educational Pruposes Only</p>
     </footer>
     <a href="#create_acc" class="scroll_down">
         <i class="fa-solid fa-chevron-down scrollup_icon" title="Icône Scroll-Down"></i>

@@ -1,6 +1,6 @@
 <?php
         try{// On se connecte à MySQL
-
+            error_reporting(E_ALL & ~E_WARNING);
                 $email = $_POST['mail'];
                 $password = $_POST['psw'];
                 $pdo_options[PDO::ATTR_ERRMODE] = PDO::ERRMODE_EXCEPTION;
@@ -15,17 +15,19 @@
                     
 
                 if(isset($_POST['mail']) && isset($_POST['psw'])){
-                        
+                    
                     $data = $result->fetchAll();
+                    
                     if(password_verify($password, $data[0]["password"]))
                     {
-                        echo "<p class=\"success\">Vous êtes bien connectés
+                        echo "<p class=\"success\">Vous êtes bien connectés !
                         </p>";
                         $_SESSION['email'] = $email;    
                     }
                     else
                     {
-                        echo "<br>Identifiants invalides !!!";
+                        echo "<p class=\"error\">Identifiants Invalides !!!
+                        </p>";
                         }
                     }
                     }

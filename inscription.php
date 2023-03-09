@@ -37,7 +37,7 @@
                     <legend>
                         Créer un compte
                     </legend>
-                    <form action="./src/traitement.inc.php" method="post">
+                    <form action="" method="post">
     
                     <label for="user-lastname">Nom *</label><br>
                     <input type="text" id="lastname" name="nom" placeholder="Nom" aria-required="true" required><br>
@@ -58,12 +58,14 @@
     
                     </form>
                 </fieldset>
-            
-        
+                <?php
+            //inclusion
+            include_once "./src/traitement.inc.php";
+            ?>
         </section>
     </main>
     <footer>
-
+    <p>© Andy Louis - All Rights Reserved for Educational Pruposes Only</p>
     </footer>
     <a href="#create_acc" class="scroll_down">
         <i class="fa-solid fa-chevron-down scrollup_icon" title="Icône Scroll-Down"></i>

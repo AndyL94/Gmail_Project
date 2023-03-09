@@ -1,6 +1,8 @@
 <?php 
 
 try{
+    if(isset($_POST['submit'])){
+        error_reporting(E_ALL & ~E_WARNING);
         $nom = $_POST['nom'];
         $prenom = $_POST['prénom'];
         $email = $_POST['mail'];
@@ -15,25 +17,21 @@ try{
         $result = $bdd->prepare($sql);
         $result->execute();
 
-        if(isset($_POST['mail']) && isset($_POST['psw'])){
-                        
-            $data = $result->fetch();
+        if($result->rowCount() > 0){
             if(password_verify($password, $data['password']))
             {
                 echo "<p class=\"success\">Vous êtes déja inscrit, 
-                <a href=\"../connexion.php\" title=\"pub\">Connectez vous</a>
+                <a href=\"connexion.php\" title=\"pub\">Connectez vous</a>
                 </p>";
                 $_SESSION['email'] = $email;   
-            }
-            else
+            }else
             {
                 
-                echo "<br>Cet email est déja utilisé, 
-                <a href=\"../connexion.php\" title=\"pub\">Connectez vous</a>
-                </p>";
+                echo "<p class=\"error\">Cette adresse mail est déja utilisé !!!</p>";
                 }
                 
-            }
+            
+        }
         else
         {
             $password = password_hash($password, PASSWORD_DEFAULT);
@@ -41,13 +39,14 @@ try{
             $req = $bdd->prepare($sql);
             $req->execute();
             echo "<p class=\"success\">Inscription effectuée :
-                 <a href=\"../connexion.php\" title=\"pub\">Connectez vous</a>
+                 <a href=\"connexion.php\" title=\"pub\">Connectez vous</a>
                  </p>";
         }
         $result->closeCursor();
-    }
+    }}
     catch(Exception $e){
         die("Erreur de connexion : ".$e->getMessage());
     }
+
 
 ?>
